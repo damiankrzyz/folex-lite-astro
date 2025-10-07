@@ -12,28 +12,12 @@ let {
   disableLanguages,
 } = config.settings.multilingual;
 
-export const getEnabledLocales = (
-  languagesJSON: any[],
-  multilingualEnable: any,
-  disableLanguages = [],
-  defaultLang = "en",
-) => {
-  const supported = languagesJSON.map(
-    (lang: { languageCode: any }) => lang.languageCode,
-  );
-  const disabled = multilingualEnable
-    ? disableLanguages
-    : supported.filter((lang: string) => lang !== defaultLang);
-
-  return supported.filter((lang: any) => !disabled.includes(lang));
+export const getEnabledLocales = () => {
+  // Since multilingual is disabled, always return only English
+  return ["en"];
 };
 
-export const enabledLanguages = getEnabledLocales(
-  languagesJSON,
-  multilingualEnable,
-  disableLanguages,
-  defaultLanguage,
-);
+export const enabledLanguages = getEnabledLocales();
 
 /**
  * Fetches the translations for a given language. If the requested language is disabled
@@ -131,19 +115,8 @@ export const getSupportedLanguages = (): Array<any> => {
     return cachedLanguages;
   }
 
-  const supportedLanguages = [...languagesJSON.map((lang) => lang)];
-  let disabledLanguages = config.settings.multilingual.enable
-    ? config.settings.multilingual.disableLanguages
-    : supportedLanguages
-        .map((lang) => lang.languageCode !== "en" && lang.languageCode)
-        .filter(Boolean);
-
-  // Filter out the disabled languages
-  cachedLanguages = disabledLanguages
-    ? supportedLanguages.filter(
-        (lang) => !disabledLanguages.includes(lang.languageCode),
-      )
-    : supportedLanguages;
+  // Only return English language since multilingual is disabled
+  cachedLanguages = languagesJSON.filter((lang) => lang.languageCode === "en");
 
   return cachedLanguages;
 };
@@ -160,17 +133,8 @@ export const supportedLanguages = getSupportedLanguages();
 export function generatePaths(): Array<{
   params: { lang: string | undefined };
 }> {
-  const supportedLanguages = getSupportedLanguages();
-  const paths = supportedLanguages.map((lang) => ({
-    params: {
-      lang:
-        lang.languageCode === defaultLanguage && !showDefaultLangInUrl
-          ? undefined
-          : lang.languageCode,
-    },
-  }));
-
-  return paths;
+  // Always return undefined for English to keep URLs clean
+  return [{ params: { lang: undefined } }];
 }
 
 /**

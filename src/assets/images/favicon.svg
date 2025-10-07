@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Simple infinity symbol with core - suitable for favicon -->
+  <rect width="512" height="512" fill="#6366f1"/>
+
+  <!-- Infinity Symbol -->
+  <path d="M200 256C200 207.79 219.79 170 256 170C292.21 170 312 207.79 312 256C312 304.21 292.21 342 256 342C219.79 342 200 304.21 200 256Z" fill="#fff"/>
+  <path d="M150 256C150 304.21 169.79 342 206 342C242.21 342 262 304.21 262 256C262 207.79 242.21 170 206 170C169.79 170 150 207.79 150 256Z" fill="#a78bfa"/>
+
+  <!-- Core Circle -->
+  <circle cx="256" cy="256" r="40" fill="#1e293b"/>
+  <circle cx="256" cy="256" r="25" fill="#fff"/>
+</svg>

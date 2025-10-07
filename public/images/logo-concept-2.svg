@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" fill="none">
+  <!-- Hexagon with Infinity -->
+  <path d="M25 10L35 15.773V27.227L25 33L15 27.227V15.773L25 10Z" fill="#6366f1" opacity="0.2"/>
+  <path d="M25 13L33 17.598V26.402L25 31L17 26.402V17.598L25 13Z" stroke="#6366f1" stroke-width="2" fill="none"/>
+  <path d="M20 22C20 20.343 21.119 19 22.5 19C23.881 19 25 20.343 25 22C25 23.657 23.881 25 22.5 25C21.119 25 20 23.657 20 22Z" fill="#8b5cf6"/>
+  <path d="M25 22C25 23.657 26.119 25 27.5 25C28.881 25 30 23.657 30 22C30 20.343 28.881 19 27.5 19C26.119 19 25 20.343 25 22Z" fill="#6366f1"/>
+
+  <!-- Text -->
+  <text x="45" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1e293b">
+    InfiniCore
+  </text>
+  <text x="45" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b">
+    SOLUTIONS
+  </text>
+</svg>

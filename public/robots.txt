@@ -1,0 +1,12 @@
+# robots.txt for InfiniCore Solutions
+# https://www.infinicore.solutions
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private paths
+Disallow: /_astro/
+Disallow: /cdn-cgi/
+
+# Sitemap location
+Sitemap: https://www.infinicore.solutions/sitemap-index.xml

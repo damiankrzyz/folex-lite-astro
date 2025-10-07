@@ -12,13 +12,20 @@
     },
     {
       "enable": true,
-      "name": "Projects",
-      "url": "/#projects"
+      "name": "Contact",
+      "url": "/#contact"
+    }
+  ],
+  "footerQuickLinks": [
+    {
+      "enable": true,
+      "name": "Privacy Policy",
+      "url": "/privacy-policy/"
     },
     {
       "enable": true,
-      "name": "Pricing",
-      "url": "/#pricing"
+      "name": "Terms & Conditions",
+      "url": "/terms-conditions/"
     }
   ]
 }

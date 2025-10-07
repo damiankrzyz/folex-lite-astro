@@ -57,6 +57,17 @@ const copyrightParts = splitProtectedText(copyrightText);
         }
         <div class="space-y-4">
           {
+            t("footerQuickLinks") && Array.isArray(t("footerQuickLinks")) && (
+              <ul class="has-list has-list-slash prose-a:text-inherit flex flex-wrap gap-y-2 mb-4">
+                {t("footerQuickLinks").map((link: any) => link.enable && (
+                  <li class="prose-a:text-text-default/70 prose-a:hover:text-text-default">
+                    <a href={link.url}>{link.name}</a>
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+          {
             config.settings.copyright?.enable && (
               <ul class="has-list has-list-slash prose-a:text-inherit flex flex-wrap gap-y-2">
                 {copyrightParts.map((value) => (

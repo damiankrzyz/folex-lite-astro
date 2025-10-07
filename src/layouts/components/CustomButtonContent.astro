@@ -3,11 +3,13 @@ const { label, title, isCreativeHoverEffect } = Astro.props;
 
 // Check if the label contain "learn more" "read more" type of text that need to add support for accessibility
 let addAriaLabel = false;
-if (
-  label.toLowerCase().includes("learn more") ||
-  label.toLowerCase().includes("read more")
-) {
-  addAriaLabel = true;
+if (label && typeof label === 'string') {
+  if (
+    label.toLowerCase().includes("learn more") ||
+    label.toLowerCase().includes("read more")
+  ) {
+    addAriaLabel = true;
+  }
 }
 ---
 
